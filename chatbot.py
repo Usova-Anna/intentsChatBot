@@ -1,3 +1,4 @@
+#Телеграм-бот instentsBot
 import random
 import urllib.request
 from sklearn.feature_extraction.text import CountVectorizer
@@ -84,13 +85,6 @@ async def reply(update: Update, context) -> None:
     print(">", reply)
     await update.message.reply_text(reply)  # вместо return, ответ пользователю в чат
 
-phrase = ""
-while phrase != "Exit":
-    phrase = input("<")
-    print(bot(phrase))
-
-
-
 # создаём объект приложения - связываем функцию с ботом
 app = ApplicationBuilder().token(TOKEN).build()
 
@@ -103,4 +97,4 @@ app.add_handler(handler)
 
 # запускаем приложение
 app.run_polling()
-
+print("Telegram bot is ready")
