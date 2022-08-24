@@ -43,7 +43,6 @@ X_vec = vectorizer.transform(X)
 print(X_vec.toarray())
 
 print(vectorizer.transform(['Как дела']).toarray())
-print("dfsdfsdf")
 # создаём модель
 model_mlp = MLPClassifier()
 
